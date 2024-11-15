@@ -41,7 +41,7 @@ public class FrontExt {
     }
 
     public void transferInit() {
-        setTransfer(0.4, 0.4);
+        setTransfer(0.4, 0.45);
     }
 
     public void transferFullIn() {
@@ -104,7 +104,7 @@ public class FrontExt {
     }
 
     public void frontPivotTransfer() {
-        setFrontPivot(0.35);
+        setFrontPivot(0.4);
     }
 
     /**

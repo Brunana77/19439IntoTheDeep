@@ -5,7 +5,7 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 import org.firstinspires.ftc.teamcode.mechanisms.Drivetrain;
 
-@TeleOp
+
 public class DriveTest extends OpMode {
 
     Drivetrain drivetrain = new Drivetrain();
