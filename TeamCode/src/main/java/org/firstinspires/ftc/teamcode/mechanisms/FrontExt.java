@@ -45,7 +45,7 @@ public class FrontExt {
     }
 
     public void transferFullIn() {
-        setTransfer(0.4,0.4);
+        setTransfer(0.4,0.45);
     }
 
     public void transferMiddle() {

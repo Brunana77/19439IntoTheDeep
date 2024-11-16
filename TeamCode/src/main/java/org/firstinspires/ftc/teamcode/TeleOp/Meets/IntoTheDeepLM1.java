@@ -89,14 +89,14 @@ public class IntoTheDeepLM1 extends OpMode {
         //Transfer specimen from front to back extension.
         if (gamepad1.a) {
             runtime.reset();
-            while (runtime.seconds() <= 1) {
+            while (runtime.seconds() <= .75) {
                 frontExtension.frontPivotTransfer();
                 frontExtension.backPivotTransfer();
                 frontExtension.wristInit();
                 frontExtension.transferFullIn();
             }
             runtime.reset();
-            while (runtime.seconds() <= 0.25) {
+            while (runtime.seconds() <= 0.125) {
                 frontExtension.frontClawOpen();
                 backLift.slideClawClose();
             }
@@ -180,9 +180,16 @@ if (gamepad1.right_bumper) {
 
         //Reset slides and claws.
         if (gamepad2.b) {
+            runtime.reset();
+            while (runtime.seconds() <= 0.125) {
+                backLift.slideClawOpen();}
+            runtime.reset();
+            while (runtime.seconds() <= 0.25) {
+                backLift.slidePivotBase();
+            }
             backLift.slidePivotBase();
             backLift.specimenOpen();
-            backLift.slideClawOpen();
+
             backLift.slidesBase();
         }
 
