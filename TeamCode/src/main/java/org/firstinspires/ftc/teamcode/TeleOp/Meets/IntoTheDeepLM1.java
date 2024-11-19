@@ -169,13 +169,17 @@ if (gamepad1.right_bumper) {
 
         //Grab specimen.
         if (gamepad2.dpad_left) {
-            backLift.specimenClose();
+            runtime.reset();
+            while (runtime.seconds() <= 0.5) {
+                backLift.specimenClose();
+            }
             backLift.slidesSpecimenPreHang();
         }
 
         //Middle slides.
         if (gamepad2.dpad_right) {
             backLift.slidesMiddle();
+            backLift.slidePivotDrop();
         }
 
         //Reset slides and claws.
